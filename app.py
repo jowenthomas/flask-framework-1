@@ -1,6 +1,7 @@
 from flask import Flask, render_template, flash, redirect, url_for
 from config import Config
 from forms import SubmitForm
+import os
 
 #for api with heroku environment
 from boto.s3.connection import S3Connection

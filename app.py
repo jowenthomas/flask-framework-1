@@ -1,11 +1,12 @@
 from flask import Flask, render_template, flash, redirect, url_for
 from config import Config
 from forms import SubmitForm
+
+from dotenv import load_dotenv
+load_dotenv()
 import os
 
-#for api with heroku environment
-from boto.s3.connection import S3Connection
-conn = S3Connection(os.environ['api_key'])
+api_key = os.getenv("api_key")
 
 
 app = Flask(__name__)
